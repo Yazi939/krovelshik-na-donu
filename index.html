@@ -14,88 +14,118 @@
 <body>
   <div class="cookie" id="cookie">
     <p>Мы используем cookie для улучшения работы сайта</p>
-    <button type="button" class="cookie__btn" id="cookieAccept">Принять</button>
+    <button type="buttonimage.png" class="cookie__btn" id="cookieAccept">Принять</button>
   </div>
 
   <div class="site-head" id="siteHead">
-    <!-- 1 уровень шапки -->
+    <!-- Ряд 1: утилитарная полоса -->
     <div class="topbar">
       <div class="container topbar__inner">
-        <nav class="topbar__nav">
-          <a href="#hero">Главная</a>
-          <a href="#catalog">Магазин</a>
-          <a href="#promo">Акции</a>
-          <a href="#services">Услуги</a>
-          <a href="#about">О компании</a>
-          <a href="#vacancies" class="topbar__vacancy">Вакансии</a>
-        </nav>
+        <div class="topbar__left">
+          <span class="topbar__city">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            г. Ростов-на-Дону
+          </span>
+          <nav class="topbar__nav">
+            <a href="#hero">Главная</a>
+            <a href="#about">Отзывы</a>
+            <a href="#catalog">Магазин</a>
+            <a href="#contacts">Доставка</a>
+            <a href="#promo">Акции</a>
+            <a href="#contacts">Услуги</a>
+            <a href="#catalog">Коллекции</a>
+            <a href="#about">О компании</a>
+            <a href="#vacancies">Вакансии</a>
+          </nav>
+        </div>
+        <div class="topbar__right">
+          <a href="#login" class="topbar__auth">Вход / Регистрация</a>
+          <a href="tel:+79614101452" class="topbar__phone">+7 (961) 410-14-52</a>
+        </div>
       </div>
     </div>
 
-    <!-- 2 уровень шапки -->
+    <!-- Ряд 2: логотип, плюшки, корзина, CTA -->
     <header class="header">
       <div class="container header__inner">
         <a href="#hero" class="logo">
-          <span class="logo__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
-              <path d="M4 22 L24 6 L44 22" stroke="#E87831" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 20 V40 H38 V20" stroke="#0B4A8F" stroke-width="3" stroke-linejoin="round"/>
-              <rect x="20" y="28" width="8" height="12" fill="#0B4A8F"/>
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 56 28" fill="none">
+              <path d="M2 22 L14 8 L22 16 L34 4 L54 22" stroke="#E87831" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
-          <span class="logo__text">
-            <span class="logo__title">КРОВЕЛЬЩИК</span>
-            <span class="logo__sub">ДОНА</span>
-          </span>
+          <span class="logo__name">КРОВЕЛЬЩИК ДОНА</span>
         </a>
 
-        <div class="header__phones">
-          <a href="tel:+79614101452" class="header__phone">+7 (961) 410-14-52</a>
-          <a href="tel:+79614101452" class="header__phone header__phone--second">+7 (961) 410-14-52</a>
-        </div>
-
-        <div class="header__meta">
-          <a href="mailto:k.dona61@mail.ru" class="header__mail">k.dona61@mail.ru</a>
-          <span class="header__addr">ул. Вавилова 73 Д</span>
-        </div>
-
-        <div class="search-wrap">
-          <form class="search" action="#" role="search" id="siteSearchForm">
-            <input type="search" placeholder="Поиск по сайту..." class="search__input" id="siteSearchInput" autocomplete="off" />
-            <button type="submit" class="search__btn" aria-label="Найти">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-            </button>
-          </form>
-          <div class="search-drop" id="searchDrop" hidden>
-            <ul class="search-drop__list" id="searchResults"></ul>
-            <p class="search-drop__empty" id="searchEmpty" hidden>Ничего не найдено</p>
+        <div class="header__infos">
+          <div class="header-info">
+            <span class="header-info__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            </span>
+            <span class="header-info__text">Бесплатный расчёт<br>кровли за 1 день</span>
+          </div>
+          <div class="header-info">
+            <span class="header-info__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7V10z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+            </span>
+            <span class="header-info__text">Доставка материалов<br>по Ростову и Югу</span>
+          </div>
+          <div class="header-info">
+            <span class="header-info__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <span class="header-info__text">Пн–Пт: 9:00–18:00<br>Сб: 9:00–15:00</span>
           </div>
         </div>
 
-        <div class="header__social">
-          <a href="https://t.me/" class="soc-link" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21.5 3.5L2.7 10.8c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.9 5.7c.2.7.4.9 1 .9.6 0 .8-.3 1.1-.6l2.3-2.4 4.8 3.5c.9.5 1.5.2 1.7-.8L22.9 4.8c.3-1.2-.4-1.7-1.4-1.3zM9.4 14.3l-.3 3.2-1.2-4 9.6-6.1-8.1 6.9z"/></svg>
+        <div class="header__actions">
+          <a href="#cart" class="cart-link">
+            <span class="cart-link__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M6 6L5 3H2"/></svg>
+            </span>
+            <span class="cart-link__text">
+              <span>Корзина</span>
+              <strong>пока пуста</strong>
+            </span>
           </a>
-          <a href="https://instagram.com/" class="soc-link" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://wa.me/79614101452" class="soc-link" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.3 1.2-2.1 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.2-4.9-4.4-.2-.2-1.3-1.7-1.3-3.3 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.3.1.4 0 .6l-.4.7c-.1.2-.3.4-.1.7.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.3.3.1.5.1.7-.1l.8-1c.2-.2.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.3 0 1.1-.3 1.8z"/></svg>
-          </a>
-          <button type="button" class="btn btn--orange btn--call" data-modal="call">Оставить заявку</button>
+          <button type="button" class="btn btn--orange btn--cta" data-modal="call">Заказать звонок</button>
         </div>
       </div>
     </header>
 
-    <!-- Меню склеено с шапкой -->
+    <!-- Ряд 3: каталог + меню + поиск -->
     <nav class="navbar" id="navbar">
       <div class="container navbar__inner">
+        <button type="button" class="navbar__catalog" id="catalogBtn">
+          <span class="navbar__burger" aria-hidden="true"><span></span><span></span><span></span></span>
+          Каталог товаров
+        </button>
         <ul class="navbar__menu">
-          <li><a href="#catalog">Каталог</a></li>
-          <li><a href="#project">Проект кровли</a></li>
-          <li><a href="#calc">Просчёт кровельных материалов согласно СНиП</a></li>
-          <li><a href="#inspect">Осмотр и дефектовка</a></li>
+          <li><a href="#catalog">Кровельные материалы</a></li>
+          <li><a href="#catalog">Водосточные системы</a></li>
+          <li><a href="#catalog">Теплоизоляция</a></li>
+          <li><a href="#promo">Инструменты</a></li>
+          <li><a href="#promo">Акции</a></li>
+          <li><a href="#contacts">Услуги</a></li>
+          <li><a href="#news">Блог</a></li>
         </ul>
+        <div class="navbar__search search-wrap">
+          <button type="button" class="navbar__search-btn" id="searchToggle" aria-label="Поиск по сайту">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+          <div class="navbar__search-panel" id="searchPanel" hidden>
+            <form class="search" action="#" role="search" id="siteSearchForm">
+              <input type="search" placeholder="Поиск по сайту..." class="search__input" id="siteSearchInput" autocomplete="off" />
+              <button type="submit" class="search__btn" aria-label="Найти">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              </button>
+            </form>
+            <div class="search-drop" id="searchDrop" hidden>
+              <ul class="search-drop__list" id="searchResults"></ul>
+              <p class="search-drop__empty" id="searchEmpty" hidden>Ничего не найдено</p>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
@@ -122,7 +152,7 @@
                 <div class="hero__content">
                   <h2 class="hero__title">Монтаж кровли<br>за 1–7 дней</h2>
                   <p class="hero__text">Замер, доставка материалов и профессиональная укладка любой сложности.</p>
-                  <a href="#services" class="btn btn--orange btn--lg">Заказать монтаж</a>
+                  <a href="#contacts" class="btn btn--orange btn--lg">Заказать монтаж</a>
                 </div>
               </div>
             </div>
@@ -145,290 +175,378 @@
       </div>
     </section>
 
-    <!-- Плюшки -->
-    <section class="perks">
-      <div class="container perks__row reveal">
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Бесплатный расчёт</strong>
-          <span>просчёт по СНиП без оплаты</span>
-        </div>
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Собственный склад</strong>
-          <span>материалы всегда в наличии</span>
-        </div>
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Доставка</strong>
-          <span>по Ростову и области</span>
-        </div>
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Гарантия 5 лет</strong>
-          <span>+ 2 года обслуживания</span>
-        </div>
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Монтаж под ключ</strong>
-          <span>от проекта до сдачи</span>
-        </div>
-        <div class="perk">
-          <span class="perk__icon" aria-hidden="true"></span>
-          <strong>Опыт с 2004</strong>
-          <span>частные и коммерческие объекты</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6 ключевых блоков с наложенным заголовком -->
+    <!-- 6 блоков: мозаика как на 1й картинке, тексты со 2й -->
     <section class="section directions" id="catalog">
       <div class="container">
         <div class="dir-grid reveal">
-          <a href="#project" class="dir-tile">
+          <a href="#project" class="dir-tile dir-tile--tall">
             <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Проектирование кровли" />
             <div class="dir-tile__overlay">
               <h3>Проектирование кровли</h3>
-              <p>Чертёж крыши, узлы и конструктив — подберём решение под ваш объект</p>
+              <p>Разработка проекта кровельной системы с учётом нагрузок, конструктивных особенностей и норм.</p>
             </div>
           </a>
           <a href="#calc" class="dir-tile">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Подбор и просчёт" />
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Подбор и просчёт материалов" />
             <div class="dir-tile__overlay">
               <h3>Подбор и просчёт материалов</h3>
-              <p>От армопояса до цвета кровельного покрытия</p>
+              <p>От крепежа и элементов кровельной системы до цвета кровельного покрытия.</p>
             </div>
           </a>
-          <a href="#services" class="dir-tile">
-            <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=900&q=80" alt="Монтаж по СНиП" />
+          <a href="#contacts" class="dir-tile">
+            <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80" alt="Монтаж кровельной системы" />
             <div class="dir-tile__overlay">
-              <h3>Монтаж кровельной системы по СНиП</h3>
-              <p>Элементы безопасности, вентиляция и обслуживаемые конструкции</p>
+              <h3>Монтаж кровельной системы</h3>
+              <p>Монтаж согласно СНиП с элементами безопасности для обслуживания кровли, вентиляции и др. конструкций.</p>
             </div>
           </a>
-          <a href="#inspect" class="dir-tile">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Дефектовка" />
+          <a href="#inspect" class="dir-tile dir-tile--tall">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Дефектовка кровли" />
             <div class="dir-tile__overlay">
-              <h3>Дефектовка системы и покрытия</h3>
-              <p>Износ, качество сборки, пирог утепления чердака и мансарды</p>
+              <h3>Дефектовка кровли</h3>
+              <p>Проверка кровли на износ и качество сборки. Оценка кровельного пирога и утепления чердачных и мансардных крыш.</p>
             </div>
           </a>
-          <a href="#services" class="dir-tile">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Ремонт кровельного пирога" />
+          <a href="#contacts" class="dir-tile">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Ремонт кровли под ключ" />
             <div class="dir-tile__overlay">
-              <h3>Ремонт кровельного пирога под ключ</h3>
-              <p>От очагового до капитального ремонта всей системы</p>
+              <h3>Ремонт кровли под ключ</h3>
+              <p>От мелкого локального ремонта до капитального ремонта всей кровельной системы и кровельного пирога.</p>
             </div>
           </a>
           <a href="#project" class="dir-tile">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Изменение конструкции" />
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Изменение кровли" />
             <div class="dir-tile__overlay">
-              <h3>Изменение конструкции кровли</h3>
-              <p>Высота и разлом ската, жилое или техническое подкровельное пространство</p>
+              <h3>Изменение кровли</h3>
+              <p>Изменение высоты и геометрии кровли. Устройство жилого или технического подкровельного пространства.</p>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Как мы работаем -->
-    <section class="section how" id="project">
-      <div class="container">
-        <h2 class="section__title reveal">Как мы работаем</h2>
-        <div class="how__grid reveal">
-          <div class="how-step">
-            <span class="how-step__num">01</span>
-            <h3>Заявка</h3>
-            <p>Оставляете заявку или звоните — фиксируем задачу и сроки</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num">02</span>
-            <h3>Подбор системы</h3>
-            <p>Вид кровли, покрытие, производитель, цвет и форма</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num">03</span>
-            <h3>Проект и просчёт</h3>
-            <p>Просчёт кровельных материалов согласно СНиП</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num">04</span>
-            <h3>Договор</h3>
-            <p>Согласовываем смету, сроки и объём работ</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num">05</span>
-            <h3>Монтаж</h3>
-            <p>Выполняем работы с контролем качества на объекте</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num">06</span>
-            <h3>Сдача и гарантия</h3>
-            <p>Гарантия 5 лет и 2 года бесплатного обслуживания</p>
-          </div>
-        </div>
-        <div class="how__cta reveal" id="calc">
-          <button type="button" class="btn btn--orange btn--lg" data-modal="call">Отправить заявку</button>
-          <a href="#inspect" class="btn btn--outline btn--lg">Осмотр и дефектовка</a>
-        </div>
-      </div>
-    </section>
+    <div id="project" class="visually-hidden" aria-hidden="true"></div>
+    <div id="calc" class="visually-hidden" aria-hidden="true"></div>
 
-    <!-- Новинки / Хиты / Инструменты -->
+    <!-- Магазин: вкладки товаров -->
     <section class="section products" id="promo">
       <div class="container">
         <div class="tabs reveal" role="tablist">
           <button type="button" class="tabs__btn is-active" data-tab="new">Новинки</button>
+          <button type="button" class="tabs__btn" data-tab="sale">Распродажа</button>
           <button type="button" class="tabs__btn" data-tab="hits">Хиты продаж</button>
-          <button type="button" class="tabs__btn" data-tab="tools">Инструменты для профессионального монтажа кровли</button>
+          <button type="button" class="tabs__btn" data-tab="rec">Рекомендуем</button>
+          <button type="button" class="tabs__btn" data-tab="defect">Некондиция</button>
+          <button type="button" class="tabs__btn" data-tab="tools">Инструменты</button>
         </div>
         <div class="product-grid reveal" id="productGrid"></div>
       </div>
     </section>
 
-    <!-- Партнёры — свои компании -->
-    <section class="section partners" id="about">
-      <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Наши партнёры</h2>
-          <div class="rec-nav">
-            <button type="button" class="rec-nav__btn partners-prev" aria-label="Назад"></button>
-            <button type="button" class="rec-nav__btn partners-next" aria-label="Вперёд"></button>
-          </div>
-        </div>
-        <div class="swiper partners-swiper reveal">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><div class="brand-card brand-card--own"><span>Караван Дона</span></div></div>
-            <div class="swiper-slide"><div class="brand-card brand-card--own"><span>Кузнечный Дом</span></div></div>
-            <div class="swiper-slide"><div class="brand-card brand-card--own"><span>Краски Дона</span></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Продаваемые материалы -->
-    <section class="section sold">
-      <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Продаваемые материалы</h2>
-          <div class="rec-nav">
-            <button type="button" class="rec-nav__btn sold-prev" aria-label="Назад"></button>
-            <button type="button" class="rec-nav__btn sold-next" aria-label="Вперёд"></button>
-          </div>
-        </div>
-        <p class="section__lead reveal">Бюджетные позиции для самостоятельной покупки. Монтаж этих позиций мы не выполняем.</p>
-        <div class="swiper sold-swiper reveal">
-          <div class="swiper-wrapper" id="soldWrapper"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Выполним работы — направления -->
+    <!-- Направления работ — без заголовка, 5 блоков (4-й блок на странице) -->
     <section class="section works">
       <div class="container">
-        <h2 class="section__title reveal">Выполним работы на кровельных системах</h2>
-        <p class="section__lead reveal">Готовы взять объекты любой сложности — от частного дома до коммерческих комплексов</p>
-      </div>
-      <div class="marquee reveal" aria-label="Направления работ">
-        <div class="marquee__track" id="worksTrack"></div>
+        <div class="works-grid reveal" id="worksTrack"></div>
       </div>
     </section>
 
-    <!-- Услуги: без заголовка, 2×6 + показать ещё 5 -->
-    <section class="section services-block" id="services">
+    <!-- Популярные категории — вёрстка как на оригинале (9 из N + «Показать ещё») -->
+    <section class="section popular-cats" id="popular">
       <div class="container">
-        <p class="services-slogan reveal">Кровельщик Дона — кровельные материалы, комплектующие. Монтаж и ремонт кровли под ключ</p>
-        <div class="service-grid" id="serviceGrid">
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Устранение протечек</strong>
-            <span>локальный ремонт и герметизация</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Ремонт после ветра</strong>
-            <span>восстановление покрытия и узлов</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Замена покрытия</strong>
-            <span>металлочерепица, мягкая кровля</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Утепление кровли</strong>
-            <span>пирог, конденсат, теплопотери</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Гидроизоляция</strong>
-            <span>мембраны и узлы примыканий</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Монтаж водостоков</strong>
-            <span>жёлоба, воронки, отводы</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Обслуживание кровли</strong>
-            <span>чистка, осмотр, профилактика</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Конёк и ендовы</strong>
-            <span>ремонт самых уязвимых узлов</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Усиление стропил</strong>
-            <span>несущая способность каркаса</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Мансардные окна</strong>
-            <span>установка и герметизация</span>
-          </a>
-          <a href="#" class="service-card is-visible">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Снегозадержание</strong>
-            <span>безопасность кровли зимой</span>
-          </a>
-          <a href="#" class="service-card is-visible" id="inspect">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Осмотр и дефектовка</strong>
-            <span>фиксируем повреждения и объём</span>
-          </a>
+        <h2 class="popular-cats__title reveal">Популярные категории</h2>
+        <div class="popular-grid reveal" id="popularGrid"></div>
+      </div>
+    </section>
 
-          <a href="#" class="service-card is-extra">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Вентиляция кровли</strong>
-            <span>аэраторы и подкровельный зазор</span>
-          </a>
-          <a href="#" class="service-card is-extra">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Аварийный выезд</strong>
-            <span>быстрая локализация протечки</span>
-          </a>
-          <a href="#" class="service-card is-extra">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Перекрытие старой кровли</strong>
-            <span>работа по существующему основанию</span>
-          </a>
-          <a href="#" class="service-card is-extra">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Герметизация примыканий</strong>
-            <span>трубы, парапеты, стены</span>
-          </a>
-          <a href="#" class="service-card is-extra">
-            <span class="service-card__icon" aria-hidden="true"></span>
-            <strong>Чердачные лестницы</strong>
-            <span>монтаж и подгонка проёма</span>
-          </a>
+    <!-- Партнёры — сетка как «популярные производители» -->
+    <section class="section partners" id="about">
+      <div class="container">
+        <h2 class="partners__title reveal">Наши партнёры</h2>
+        <div class="partners-grid reveal" id="partnersGrid"></div>
+      </div>
+    </section>
+
+    <!-- Новости и предложения — вкладки как у магазина -->
+    <section class="section news" id="news">
+      <div class="container">
+        <div class="news-tabs reveal" role="tablist">
+          <button type="button" class="news-tabs__btn is-active" data-news-tab="news">Новости</button>
+          <button type="button" class="news-tabs__btn" data-news-tab="offers">Предложения</button>
         </div>
-        <div class="services-more">
-          <button type="button" class="btn btn--outline btn--lg" id="servicesMore">Показать ещё 5</button>
+        <div class="news-grid reveal" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Дизайнерские решения по кровле — промо-слайдер (фото объектов подставятся позже) -->
+    <section class="section design-banner" id="design">
+      <div class="container">
+        <div class="swiper design-swiper reveal">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="design-slide">
+                <div class="design-slide__bg" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="design-slide__content">
+                  <h2 class="design-slide__title">Дизайнерские решения</h2>
+                  <p class="design-slide__sub">по кровле</p>
+                  <ul class="design-slide__feats">
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18 L16 6 L28 18"/><path d="M8 18 V26 H24 V18"/></svg>
+                      </span>
+                      <span>Эскиз</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="10" width="20" height="14" rx="1"/><path d="M6 14 H26"/><path d="M12 10 V6 H20 V10"/></svg>
+                      </span>
+                      <span>3D-вид</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4" fill="currentColor" stroke="none"/></svg>
+                      </span>
+                      <span>Цвет</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 22 L16 8 L27 22 Z"/><path d="M11 22 V26 H21 V22"/></svg>
+                      </span>
+                      <span>Форма</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="design-slide__visual" aria-hidden="true">
+                  <div class="roof-3d roof-3d--a">
+                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="rWallA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a9ad8"/><stop offset="55%" stop-color="#2d6ba8"/><stop offset="100%" stop-color="#163d66"/></linearGradient>
+                        <linearGradient id="rWallSideA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2a5f96"/><stop offset="100%" stop-color="#0f2d4d"/></linearGradient>
+                        <linearGradient id="rRoofLeftA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c8e7ff"/><stop offset="40%" stop-color="#6eb4ef"/><stop offset="100%" stop-color="#2f6fad"/></linearGradient>
+                        <linearGradient id="rRoofRightA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fc8f5"/><stop offset="100%" stop-color="#1f568c"/></linearGradient>
+                        <linearGradient id="rRidgeA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eaf6ff"/><stop offset="100%" stop-color="#7eb8e8"/></linearGradient>
+                        <linearGradient id="rGlassA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8e0ff" stop-opacity="0.55"/><stop offset="100%" stop-color="#1a4068" stop-opacity="0.35"/></linearGradient>
+                        <linearGradient id="rGroundA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#041428" stop-opacity="0.45"/><stop offset="100%" stop-color="#041428" stop-opacity="0"/></linearGradient>
+                        <filter id="rSoftA" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#02101f" flood-opacity="0.65"/></filter>
+                        <pattern id="rTilesA" width="18" height="10" patternUnits="userSpaceOnUse" patternTransform="skewX(-18)">
+                          <path d="M0 9 H18" stroke="#ffffff" stroke-opacity="0.14" stroke-width="0.8"/>
+                          <path d="M0 4 H18" stroke="#0a2a4a" stroke-opacity="0.18" stroke-width="0.6"/>
+                        </pattern>
+                      </defs>
+                      <ellipse cx="240" cy="318" rx="170" ry="22" fill="url(#rGroundA)"/>
+                      <g filter="url(#rSoftA)">
+                        <polygon points="78,248 78,268 348,268 348,248 372,236 372,218 348,230" fill="#0d2848" opacity="0.55"/>
+                        <polygon points="78,168 240,78 348,148 348,248 78,248" fill="url(#rWallA)"/>
+                        <polygon points="348,148 390,128 390,228 348,248" fill="url(#rWallSideA)"/>
+                        <polygon points="78,168 240,78 280,58 118,148" fill="url(#rRoofLeftA)"/>
+                        <polygon points="78,168 240,78 280,58 118,148" fill="url(#rTilesA)"/>
+                        <polygon points="240,78 280,58 390,128 348,148" fill="url(#rRoofRightA)"/>
+                        <polygon points="240,78 280,58 390,128 348,148" fill="url(#rTilesA)" opacity="0.7"/>
+                        <path d="M118 148 L280 58" stroke="url(#rRidgeA)" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M78 168 L240 78 L348 148" fill="none" stroke="#d7efff" stroke-width="2" opacity="0.45"/>
+                        <polygon points="300,95 318,86 318,118 300,128" fill="#3a6fa8"/>
+                        <polygon points="318,86 332,94 332,126 318,118" fill="#1f4a78"/>
+                        <polygon points="296,90 318,78 336,88 314,100" fill="#9ec8ef"/>
+                        <rect x="130" y="188" width="52" height="68" rx="3" fill="#071f38" opacity="0.65"/>
+                        <rect x="136" y="194" width="40" height="28" fill="url(#rGlassA)"/>
+                        <rect x="136" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
+                        <path d="M156 194 V248 M136 222 H176" stroke="#9fd0f5" stroke-opacity="0.35" stroke-width="1"/>
+                        <rect x="210" y="188" width="52" height="68" rx="3" fill="#071f38" opacity="0.65"/>
+                        <rect x="216" y="194" width="40" height="28" fill="url(#rGlassA)"/>
+                        <rect x="216" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
+                        <path d="M236 194 V248 M216 222 H256" stroke="#9fd0f5" stroke-opacity="0.35" stroke-width="1"/>
+                        <rect x="290" y="198" width="38" height="50" rx="2" fill="#0a223c" opacity="0.75"/>
+                        <rect x="296" y="204" width="26" height="18" fill="url(#rGlassA)" opacity="0.5"/>
+                        <circle cx="320" cy="230" r="2" fill="#c8e4ff"/>
+                        <path d="M78 220 H348" stroke="#9fd0f5" stroke-opacity="0.12" stroke-width="1"/>
+                        <polygon points="120,150 210,95 230,105 140,162" fill="#ffffff" opacity="0.12"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="design-slide">
+                <div class="design-slide__bg" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="design-slide__content">
+                  <h2 class="design-slide__title">Эскиз под ваш дом</h2>
+                  <p class="design-slide__sub">от дизайнера кровли</p>
+                  <ul class="design-slide__feats">
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 24 L8 12 L16 6 L24 12 V24"/><path d="M12 24 V16 H20 V24"/></svg>
+                      </span>
+                      <span>Объект</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 22 L16 8 L26 22 Z"/><path d="M12 22 H20"/><circle cx="16" cy="16" r="2"/></svg>
+                      </span>
+                      <span>Крыша</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="18" height="18" rx="2"/><path d="M11 21 L15 13 L19 18 L21 15 L25 21"/></svg>
+                      </span>
+                      <span>Рендер</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 16 H26"/><path d="M16 6 V26"/><circle cx="16" cy="16" r="9"/></svg>
+                      </span>
+                      <span>Под ключ</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="design-slide__visual" aria-hidden="true">
+                  <div class="roof-3d roof-3d--b">
+                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="rWallB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6aa8e0"/><stop offset="100%" stop-color="#1a4d7a"/></linearGradient>
+                        <linearGradient id="rRoofB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffb06a"/><stop offset="45%" stop-color="#e87831"/><stop offset="100%" stop-color="#8f3d0c"/></linearGradient>
+                        <linearGradient id="rRoofSideB" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d46620"/><stop offset="100%" stop-color="#7a3208"/></linearGradient>
+                        <linearGradient id="rGlassB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffe0c0" stop-opacity="0.45"/><stop offset="100%" stop-color="#1a3048" stop-opacity="0.4"/></linearGradient>
+                        <filter id="rSoftB" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#02101f" flood-opacity="0.6"/></filter>
+                        <pattern id="rTilesB" width="16" height="9" patternUnits="userSpaceOnUse">
+                          <path d="M0 8 Q8 2 16 8" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="0.9"/>
+                        </pattern>
+                      </defs>
+                      <ellipse cx="240" cy="320" rx="165" ry="20" fill="#041428" opacity="0.4"/>
+                      <g filter="url(#rSoftB)">
+                        <polygon points="95,200 95,268 355,268 355,200 240,105" fill="url(#rWallB)"/>
+                        <polygon points="95,200 240,105 355,200" fill="url(#rRoofB)"/>
+                        <polygon points="95,200 240,105 355,200" fill="url(#rTilesB)"/>
+                        <polygon points="240,105 285,88 400,182 355,200" fill="url(#rRoofSideB)"/>
+                        <polygon points="240,105 285,88 400,182 355,200" fill="url(#rTilesB)" opacity="0.55"/>
+                        <path d="M110 198 L240 112 L340 198" fill="none" stroke="#ffe0c2" stroke-width="2.2" opacity="0.4"/>
+                        <polygon points="195,155 240,125 285,155 285,185 195,185" fill="#2a5f90"/>
+                        <polygon points="195,155 240,125 285,155" fill="#ff9a4a"/>
+                        <rect x="218" y="158" width="34" height="27" rx="2" fill="url(#rGlassB)"/>
+                        <path d="M235 158 V185" stroke="#fff" stroke-opacity="0.25" stroke-width="1"/>
+                        <rect x="130" y="214" width="48" height="54" rx="3" fill="#071f38" opacity="0.7"/>
+                        <rect x="136" y="220" width="36" height="42" fill="url(#rGlassB)"/>
+                        <path d="M154 220 V262 M136 241 H172" stroke="#fff" stroke-opacity="0.2" stroke-width="1"/>
+                        <rect x="270" y="214" width="48" height="54" rx="3" fill="#071f38" opacity="0.7"/>
+                        <rect x="276" y="220" width="36" height="42" fill="url(#rGlassB)"/>
+                        <path d="M294 220 V262 M276 241 H312" stroke="#fff" stroke-opacity="0.2" stroke-width="1"/>
+                        <polygon points="200,268 200,248 280,248 280,268" fill="#0d2848" opacity="0.5"/>
+                        <path d="M210 248 V230 M270 248 V230" stroke="#9ec8ef" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+                        <path d="M205 230 H275" stroke="#c8e4ff" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+                        <polygon points="150,175 210,130 225,140 165,185" fill="#fff" opacity="0.1"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="design-slide">
+                <div class="design-slide__bg" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="design-slide__content">
+                  <h2 class="design-slide__title">Дома под эти крыши</h2>
+                  <p class="design-slide__sub">уже построены</p>
+                  <ul class="design-slide__feats">
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="12" r="5"/><path d="M6 26 C6 20 11 18 16 18 C21 18 26 20 26 26"/></svg>
+                      </span>
+                      <span>Дизайн</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 20 L16 8 L27 20"/><path d="M9 20 V26 H23 V20"/></svg>
+                      </span>
+                      <span>Проект</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 24 V12 L16 7 L24 12 V24"/><path d="M14 24 V16 H18 V24"/></svg>
+                      </span>
+                      <span>Стройка</span>
+                    </li>
+                    <li>
+                      <span class="design-slide__icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 17 L14 23 L24 11"/><circle cx="16" cy="16" r="11"/></svg>
+                      </span>
+                      <span>Фото</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="design-slide__visual" aria-hidden="true">
+                  <div class="roof-3d roof-3d--c">
+                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="rWallC1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6eb0e8"/><stop offset="100%" stop-color="#234f7c"/></linearGradient>
+                        <linearGradient id="rWallC2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3a6fa8"/><stop offset="100%" stop-color="#122c48"/></linearGradient>
+                        <linearGradient id="rRoofC1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f4f8fc"/><stop offset="100%" stop-color="#8a9db0"/></linearGradient>
+                        <linearGradient id="rRoofC2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d5e0ea"/><stop offset="100%" stop-color="#5d7388"/></linearGradient>
+                        <linearGradient id="rGlassC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7efff" stop-opacity="0.5"/><stop offset="100%" stop-color="#163554" stop-opacity="0.4"/></linearGradient>
+                        <filter id="rSoftC" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#02101f" flood-opacity="0.6"/></filter>
+                        <pattern id="rTilesC" width="14" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+                          <path d="M0 7 H14" stroke="#1a3048" stroke-opacity="0.2" stroke-width="0.7"/>
+                          <path d="M0 3 H14" stroke="#fff" stroke-opacity="0.12" stroke-width="0.6"/>
+                        </pattern>
+                      </defs>
+                      <ellipse cx="240" cy="322" rx="175" ry="20" fill="#041428" opacity="0.4"/>
+                      <g filter="url(#rSoftC)">
+                        <polygon points="55,210 55,275 210,275 210,182" fill="url(#rWallC1)"/>
+                        <polygon points="55,210 132,118 210,182" fill="url(#rRoofC1)"/>
+                        <polygon points="55,210 132,118 210,182" fill="url(#rTilesC)"/>
+                        <polygon points="210,182 210,275 390,275 390,198" fill="url(#rWallC2)"/>
+                        <polygon points="210,182 295,108 390,198" fill="url(#rRoofC2)"/>
+                        <polygon points="210,182 295,108 390,198" fill="url(#rTilesC)" opacity="0.75"/>
+                        <polygon points="132,118 175,98 295,108 210,182" fill="#eef4fa" opacity="0.92"/>
+                        <polygon points="132,118 175,98 295,108 210,182" fill="url(#rTilesC)" opacity="0.45"/>
+                        <path d="M132 118 L175 98 L295 108" fill="none" stroke="#fff" stroke-width="2" opacity="0.45"/>
+                        <polygon points="330,230 330,275 420,275 420,242 390,228" fill="#1a4068"/>
+                        <polygon points="330,230 360,205 450,218 420,242 390,228" fill="#b8c9da"/>
+                        <rect x="350" y="242" width="48" height="33" rx="2" fill="#071f38" opacity="0.7"/>
+                        <path d="M374 242 V275" stroke="#9fd0f5" stroke-opacity="0.25" stroke-width="1.5"/>
+                        <rect x="85" y="220" width="42" height="50" rx="2" fill="#071f38" opacity="0.65"/>
+                        <rect x="90" y="225" width="32" height="20" fill="url(#rGlassC)"/>
+                        <rect x="90" y="248" width="32" height="16" fill="url(#rGlassC)" opacity="0.75"/>
+                        <rect x="245" y="215" width="46" height="55" rx="2" fill="#071f38" opacity="0.65"/>
+                        <rect x="251" y="221" width="34" height="43" fill="url(#rGlassC)"/>
+                        <path d="M268 221 V264 M251 242 H285" stroke="#fff" stroke-opacity="0.22" stroke-width="1"/>
+                        <rect x="310" y="215" width="46" height="55" rx="2" fill="#071f38" opacity="0.65"/>
+                        <rect x="316" y="221" width="34" height="43" fill="url(#rGlassC)"/>
+                        <path d="M333 221 V264 M316 242 H350" stroke="#fff" stroke-opacity="0.22" stroke-width="1"/>
+                        <rect x="155" y="225" width="36" height="50" rx="2" fill="#0a223c" opacity="0.8"/>
+                        <rect x="161" y="231" width="24" height="16" fill="url(#rGlassC)" opacity="0.45"/>
+                        <circle cx="183" cy="255" r="2" fill="#d7efff"/>
+                        <path d="M70 245 H200 M230 245 H380" stroke="#9fd0f5" stroke-opacity="0.1" stroke-width="1"/>
+                        <polygon points="90,175 145,130 160,140 105,185" fill="#fff" opacity="0.1"/>
+                        <polygon points="250,145 300,118 315,128 265,155" fill="#fff" opacity="0.08"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="design-nav design-nav--prev" aria-label="Назад"></button>
+          <button type="button" class="design-nav design-nav--next" aria-label="Вперёд"></button>
+          <div class="design-pagination"></div>
         </div>
+      </div>
+    </section>
+
+    <!-- Рекомендации / Продаваемые товары -->
+    <section class="section recs" id="recs">
+      <div class="container">
+        <div class="news-tabs reveal" role="tablist">
+          <button type="button" class="news-tabs__btn is-active" data-recs-tab="rec">Рекомендации</button>
+          <button type="button" class="news-tabs__btn" data-recs-tab="sold">Продаваемые товары</button>
+        </div>
+        <div class="recs-grid reveal" id="recsGrid"></div>
       </div>
     </section>
   </main>
@@ -444,7 +562,7 @@
           <li><a href="#">Оплата и доставка</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Сертификаты</a></li>
-          <li><a href="#">Статьи</a></li>
+          <li><a href="#news">Статьи</a></li>
           <li><a href="#contacts">Контакты</a></li>
           <li><a href="#">Схема проезда</a></li>
           <li><a href="#vacancies">Вакансии</a></li>
@@ -474,7 +592,7 @@
           <li><a href="#project">Проект</a></li>
           <li><a href="#calc">Просчёт согласно СНиП</a></li>
           <li><a href="#project">Договор</a></li>
-          <li><a href="#services">Монтаж</a></li>
+          <li><a href="#contacts">Монтаж</a></li>
           <li><a href="#project">Сдача</a></li>
           <li><span class="footer__note">Гарантия 5 лет с 2 года бесплатного обслуживания</span></li>
         </ul>
