@@ -2,67 +2,110 @@
 
 const PRODUCTS = {
   new: [
-    { title: "Металлочерепица Monterrey 0.45", price: "610", unit: "₽ / м²", badge: "new", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
-    { title: "Профнастил С21 оцинкованный", price: "420", unit: "₽ / м²", badge: "new", img: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" },
-    { title: "Гибкая черепица Docke Premium", price: "780", unit: "₽ / м²", badge: "new", img: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=600&q=80" },
-    { title: "Водосточная система Aquasystem", price: "1 890", unit: "₽ / компл.", badge: "new", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
-    { title: "Утеплитель Rockwool Лайт Баттс", price: "1 240", unit: "₽ / уп.", badge: "new", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
-    { title: "Мансардное окно Velux GGL", price: "28 900", unit: "₽", badge: "new", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" },
-    { title: "Сайдинг виниловый Grand Line", price: "340", unit: "₽ / шт.", badge: "new", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
-    { title: "Конёк полукруглый 2 м", price: "560", unit: "₽ / шт.", badge: "new", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
+    { title: "Металлочерепица Monterrey 0.45", price: "610", unit: "₽ / м²", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
+    { title: "Гибкая черепица Docke Premium", price: "780", unit: "₽ / м²", img: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=600&q=80" },
+    { title: "Водосточная система Aquasystem", price: "1 890", unit: "₽ / компл.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
+    { title: "Мансардное окно Velux GGL", price: "28 900", unit: "₽", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" },
+    { title: "Утеплитель Rockwool Лайт Баттс", price: "1 240", unit: "₽ / уп.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
+    { title: "Гидроизоляция Delta Vent N", price: "4 800", unit: "₽ / рул.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
+    { title: "Сайдинг Grand Line", price: "340", unit: "₽ / шт.", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
+    { title: "Конёк полукруглый 2 м", price: "560", unit: "₽ / шт.", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
   ],
   hits: [
-    { title: "Металлочерепица Cascade 0.5", price: "690", unit: "₽ / м²", badge: "hit", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
-    { title: "Мягкая кровля Katepal Ambient", price: "920", unit: "₽ / м²", badge: "hit", img: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=600&q=80" },
-    { title: "Профнастил НС35 для кровли", price: "510", unit: "₽ / м²", badge: "hit", img: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" },
-    { title: "Гидроизоляция Delta Vent N", price: "4 800", unit: "₽ / рул.", badge: "hit", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
-    { title: "Водосток Docke Premium", price: "2 150", unit: "₽ / компл.", badge: "hit", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
-    { title: "Саморезы кровельные 4.8×35", price: "890", unit: "₽ / уп.", badge: "hit", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
-    { title: "Планка карнизная 2 м", price: "420", unit: "₽ / шт.", badge: "hit", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
-    { title: "Ондулин Smart зелёный", price: "680", unit: "₽ / лист", badge: "hit", img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" },
+    { title: "Металлочерепица Cascade 0.5", price: "690", unit: "₽ / м²", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
+    { title: "Мягкая кровля Katepal Ambient", price: "920", unit: "₽ / м²", img: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=600&q=80" },
+    { title: "Профнастил НС35", price: "510", unit: "₽ / м²", img: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" },
+    { title: "Водосток Docke Premium", price: "2 150", unit: "₽ / компл.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
+    { title: "Снегозадержатель трубчатый", price: "1 480", unit: "₽ / шт.", img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" },
+    { title: "Планка карнизная 2 м", price: "420", unit: "₽ / шт.", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
+    { title: "Мембрана пароизоляционная", price: "3 200", unit: "₽ / рул.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
+    { title: "Софит перфорированный", price: "310", unit: "₽ / шт.", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
   ],
-  sale: [
-    { title: "Металлочерепица Classic (уценка)", price: "449", unit: "₽ / м²", badge: "sale", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
-    { title: "Профнастил С8 остатки", price: "299", unit: "₽ / м²", badge: "sale", img: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" },
-    { title: "Гибкая черепица серия Standard", price: "560", unit: "₽ / м²", badge: "sale", img: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=600&q=80" },
-    { title: "Водосточный жёлоб 3 м", price: "790", unit: "₽ / шт.", badge: "sale", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
-    { title: "Утеплитель минеральный 50 мм", price: "980", unit: "₽ / уп.", badge: "sale", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
-    { title: "Софит перфорированный", price: "310", unit: "₽ / шт.", badge: "sale", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
-    { title: "Ендова верхняя 2 м", price: "480", unit: "₽ / шт.", badge: "sale", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
-    { title: "Аэратор кровельный", price: "650", unit: "₽ / шт.", badge: "sale", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" },
-  ],
-  rec: [
-    { title: "Комплект кровли под ключ", price: "от 1 890", unit: "₽ / м²", badge: "hit", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
-    { title: "Металлочерепица Ruukki Purex", price: "1 150", unit: "₽ / м²", badge: "new", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
-    { title: "Мансардное окно Fakro FTP", price: "24 500", unit: "₽", badge: "hit", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" },
-    { title: "Водосток металлический", price: "2 490", unit: "₽ / компл.", badge: "new", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
-    { title: "Гидро-пароизоляция", price: "3 200", unit: "₽ / рул.", badge: "hit", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
-    { title: "Сайдинг панели премиум", price: "410", unit: "₽ / шт.", badge: "new", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
+  tools: [
+    { title: "Ножницы по металлу проходные", price: "4 900", unit: "₽", img: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80" },
+    { title: "Шуруповёрт аккумуляторный", price: "12 500", unit: "₽", img: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=600&q=80" },
+    { title: "Гибочный станок кровельный", price: "38 000", unit: "₽", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" },
+    { title: "Клещи фальцевые", price: "3 200", unit: "₽", img: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80" },
+    { title: "Рулетка лазерная", price: "6 800", unit: "₽", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
+    { title: "Страховочный пояс монтажный", price: "5 400", unit: "₽", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
+    { title: "Набор бит для кровли", price: "1 150", unit: "₽", img: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80" },
+    { title: "Молоток кровельный", price: "2 300", unit: "₽", img: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=600&q=80" },
   ],
 };
 
-const BADGE_MAP = {
-  new: { cls: "product-card__badge--new", text: "Новинка" },
-  hit: { cls: "product-card__badge--hit", text: "Хит" },
-  sale: { cls: "product-card__badge--sale", text: "Скидка" },
-};
+const SOLD_ITEMS = [
+  { title: "Профнастил С8 оцинкованный", price: "280", unit: "₽ / м²", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" },
+  { title: "Металлочерепица Monterrey 0.45", price: "490", unit: "₽ / м²", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" },
+  { title: "Ондулин Smart", price: "680", unit: "₽ / лист", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" },
+  { title: "Планка карнизная 2 м", price: "420", unit: "₽ / шт.", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" },
+  { title: "Саморезы кровельные 4.8×35", price: "890", unit: "₽ / уп.", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
+  { title: "Софит перфорированный", price: "310", unit: "₽ / шт.", note: "Продажа без монтажа", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" },
+];
+
+const WORKS = [
+  {
+    title: "Материалы и решения для кровли ТРЦ: соответствие пожарным требованиям",
+    place: "Выполним на кровельных системах",
+    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Капремонт кровли транспортных объектов: нормы, решения, материалы по СП 17.13330.2017",
+    place: "Выполним на кровельных системах",
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Кровельные работы для ресторанных комплексов — строго по СП/СНиП",
+    place: "Выполним на кровельных системах",
+    img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Кровельные и дизайнерские решения для коттеджных посёлков — опыт 20 лет",
+    place: "Выполним на кровельных системах",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+const SERVICE_ICON = `
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+    <path d="M4 20 L12 4 L20 20 Z"/>
+    <path d="M9 14 H15"/>
+  </svg>
+`;
 
 function productCardHTML(p) {
-  const badge = BADGE_MAP[p.badge] || BADGE_MAP.new;
   return `
     <article class="product-card">
-      <span class="product-card__badge ${badge.cls}">${badge.text}</span>
-      <button type="button" class="product-card__fav" aria-label="В избранное">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2.5 5 6.5 5c2 0 3.5 1.2 4.5 2.5C12 6.2 13.5 5 15.5 5c4 0 6 4 4 7.5C19 16.65 12 21 12 21z"/></svg>
-      </button>
       <a href="#" class="product-card__img"><img src="${p.img}" alt="${p.title}" loading="lazy" /></a>
       <a href="#" class="product-card__title">${p.title}</a>
       <div class="product-card__price">${p.price} <span>${p.unit}</span></div>
       <div class="product-card__meta">
         <span class="product-card__stock">В наличии</span>
-        <button type="button" class="product-card__cart" aria-label="В корзину">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/><path d="M6 6L5 3H2"/></svg>
-        </button>
+      </div>
+    </article>
+  `;
+}
+
+function soldCardHTML(p) {
+  return `
+    <article class="product-card">
+      <a href="#" class="product-card__img"><img src="${p.img}" alt="${p.title}" loading="lazy" /></a>
+      <a href="#" class="product-card__title">${p.title}</a>
+      <div class="product-card__price">${p.price} <span>${p.unit}</span></div>
+      <div class="product-card__meta">
+        <span class="product-card__stock">В наличии</span>
+        <span class="product-card__note">${p.note}</span>
+      </div>
+    </article>
+  `;
+}
+
+function workCardHTML(w) {
+  return `
+    <article class="work-card">
+      <div class="work-card__img"><img src="${w.img}" alt="" loading="lazy" /></div>
+      <div class="work-card__body">
+        <strong>${w.title}</strong>
+        <span>${w.place}</span>
       </div>
     </article>
   `;
@@ -79,51 +122,39 @@ function renderProducts(tab = "new") {
     grid.style.transition = "opacity 0.35s ease, transform 0.35s ease";
     grid.style.opacity = "1";
     grid.style.transform = "none";
-    bindFavButtons(grid);
-  }, 160);
+  }, 140);
 }
 
-function renderRecommendations() {
-  const wrap = document.getElementById("recWrapper");
+function renderSold() {
+  const wrap = document.getElementById("soldWrapper");
   if (!wrap) return;
-  wrap.innerHTML = PRODUCTS.rec
-    .map((p) => `<div class="swiper-slide">${productCardHTML(p)}</div>`)
-    .join("");
-  bindFavButtons(wrap);
+  wrap.innerHTML = SOLD_ITEMS.map((p) => `<div class="swiper-slide">${soldCardHTML(p)}</div>`).join("");
 }
 
-function bindFavButtons(root) {
-  root.querySelectorAll(".product-card__fav").forEach((btn) => {
-    btn.addEventListener("click", () => btn.classList.toggle("is-active"));
+function renderWorks() {
+  const track = document.getElementById("worksTrack");
+  if (!track) return;
+  const html = WORKS.map(workCardHTML).join("");
+  track.innerHTML = html + html;
+}
+
+function replaceServiceIcons() {
+  document.querySelectorAll(".service-card__icon").forEach((el) => {
+    el.innerHTML = SERVICE_ICON;
   });
 }
 
-/* Smooth scroll (Lenis) */
 function initSmoothScroll() {
   if (typeof Lenis === "undefined") return null;
-  const lenis = new Lenis({
+  return new Lenis({
     autoRaf: true,
     duration: 1.15,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smoothWheel: true,
     anchors: true,
   });
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const id = link.getAttribute("href");
-      if (!id || id === "#" || id.length < 2) return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      lenis.scrollTo(target, { offset: -60 });
-    });
-  });
-
-  return lenis;
 }
 
-/* Reveal on scroll */
 function initReveal() {
   const items = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver(
@@ -143,7 +174,6 @@ function initReveal() {
   });
 }
 
-/* Hero swiper */
 function initHero() {
   if (typeof Swiper === "undefined") return;
   new Swiper(".hero-swiper", {
@@ -160,16 +190,32 @@ function initHero() {
   });
 }
 
-/* Recommendations swiper */
-function initRecSwiper() {
+function initPartners() {
   if (typeof Swiper === "undefined") return;
-  new Swiper(".rec-swiper", {
+  new Swiper(".partners-swiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 14,
+    speed: 550,
+    navigation: {
+      nextEl: ".partners-next",
+      prevEl: ".partners-prev",
+    },
+    breakpoints: {
+      560: { slidesPerView: 2.2 },
+      860: { slidesPerView: 3 },
+    },
+  });
+}
+
+function initSoldSwiper() {
+  if (typeof Swiper === "undefined") return;
+  new Swiper(".sold-swiper", {
     slidesPerView: 1.15,
     spaceBetween: 16,
     speed: 600,
     navigation: {
-      nextEl: ".rec-nav__next",
-      prevEl: ".rec-nav__prev",
+      nextEl: ".sold-next",
+      prevEl: ".sold-prev",
     },
     breakpoints: {
       560: { slidesPerView: 2 },
@@ -179,7 +225,6 @@ function initRecSwiper() {
   });
 }
 
-/* Tabs */
 function initTabs() {
   document.querySelectorAll(".products .tabs__btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -188,16 +233,18 @@ function initTabs() {
       renderProducts(btn.dataset.tab);
     });
   });
+}
 
-  document.querySelectorAll(".tabs--news .tabs__btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".tabs--news .tabs__btn").forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-    });
+function initServicesMore() {
+  const btn = document.getElementById("servicesMore");
+  const block = document.querySelector(".services-block");
+  if (!btn || !block) return;
+  btn.addEventListener("click", () => {
+    const open = block.classList.toggle("is-expanded");
+    btn.textContent = open ? "Свернуть" : "Показать ещё 5";
   });
 }
 
-/* Modal */
 function initModal() {
   const modal = document.getElementById("modal");
   if (!modal) return;
@@ -211,8 +258,11 @@ function initModal() {
     document.body.style.overflow = "";
   };
 
-  document.querySelectorAll("[data-modal='call']").forEach((btn) => {
-    btn.addEventListener("click", open);
+  document.querySelectorAll("[data-modal='call']").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      open();
+    });
   });
   modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", close));
   document.addEventListener("keydown", (e) => {
@@ -228,7 +278,6 @@ function initModal() {
   });
 }
 
-/* Cookie */
 function initCookie() {
   const box = document.getElementById("cookie");
   const btn = document.getElementById("cookieAccept");
@@ -244,27 +293,168 @@ function initCookie() {
   });
 }
 
-/* Catalog button pulse */
-function initCatalogBtn() {
-  const btn = document.getElementById("catalogBtn");
-  btn?.addEventListener("click", () => {
-    btn.classList.toggle("is-open");
-    const catalog = document.getElementById("catalog");
-    catalog?.scrollIntoView({ behavior: "smooth", block: "start" });
+function buildSearchIndex() {
+  const items = [];
+
+  document.querySelectorAll(".dir-tile").forEach((el) => {
+    const title = el.querySelector("h3")?.textContent?.trim() || "";
+    const text = el.querySelector("p")?.textContent?.trim() || "";
+    items.push({ title, text, href: el.getAttribute("href") || "#catalog", type: "Направление" });
   });
+
+  document.querySelectorAll(".service-card").forEach((el) => {
+    const title = el.querySelector("strong")?.textContent?.trim() || "";
+    const text = el.querySelector("span:last-child")?.textContent?.trim() || "";
+    items.push({ title, text, href: "#services", type: "Услуга" });
+  });
+
+  document.querySelectorAll(".how-step").forEach((el) => {
+    const title = el.querySelector("h3")?.textContent?.trim() || "";
+    const text = el.querySelector("p")?.textContent?.trim() || "";
+    items.push({ title, text, href: "#project", type: "Как мы работаем" });
+  });
+
+  document.querySelectorAll(".brand-card span").forEach((el) => {
+    items.push({ title: el.textContent.trim(), text: "Партнёр", href: "#about", type: "Партнёр" });
+  });
+
+  Object.values(PRODUCTS)
+    .flat()
+    .forEach((p) => {
+      items.push({ title: p.title, text: `${p.price} ${p.unit}`, href: "#promo", type: "Товар" });
+    });
+
+  SOLD_ITEMS.forEach((p) => {
+    items.push({ title: p.title, text: p.note || "Продаваемые материалы", href: "#promo", type: "Материал" });
+  });
+
+  WORKS.forEach((w) => {
+    items.push({ title: w.title, text: w.place, href: "#promo", type: "Работы" });
+  });
+
+  [
+    { title: "Каталог", text: "Разделы и направления", href: "#catalog", type: "Раздел" },
+    { title: "Оставить заявку", text: "Форма обратной связи", href: "#", type: "Действие", action: "modal" },
+    { title: "Контакты", text: "Вавилова 73 Д, Ростов-на-Дону", href: "#contacts", type: "Раздел" },
+    { title: "Вакансии", text: "Работа в компании", href: "#vacancies", type: "Раздел" },
+  ].forEach((i) => items.push(i));
+
+  return items;
 }
 
-/* Sticky nav shadow intensify on scroll */
-function initNavScroll() {
-  const nav = document.getElementById("navbar");
-  if (!nav) return;
-  const onScroll = () => {
-    nav.style.boxShadow =
-      window.scrollY > 80
-        ? "0 8px 28px rgba(11, 74, 143, 0.35)"
-        : "0 4px 16px rgba(11, 74, 143, 0.25)";
+function initSearch() {
+  const form = document.getElementById("siteSearchForm");
+  const input = document.getElementById("siteSearchInput");
+  const drop = document.getElementById("searchDrop");
+  const list = document.getElementById("searchResults");
+  const empty = document.getElementById("searchEmpty");
+  if (!form || !input || !drop || !list || !empty) return;
+
+  const index = buildSearchIndex();
+  let active = -1;
+
+  const close = () => {
+    drop.hidden = true;
+    active = -1;
   };
-  window.addEventListener("scroll", onScroll, { passive: true });
+
+  const openModal = () => {
+    document.querySelector("[data-modal='call']")?.click();
+  };
+
+  const go = (item) => {
+    close();
+    input.blur();
+    if (item.action === "modal") {
+      openModal();
+      return;
+    }
+    const target = document.querySelector(item.href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (item.href && item.href !== "#") {
+      window.location.hash = item.href;
+    }
+  };
+
+  const render = (query) => {
+    const q = query.trim().toLowerCase();
+    if (q.length < 2) {
+      close();
+      return;
+    }
+
+    const found = index
+      .filter((item) => `${item.title} ${item.text} ${item.type}`.toLowerCase().includes(q))
+      .slice(0, 10);
+
+    drop.hidden = false;
+    active = -1;
+
+    if (!found.length) {
+      list.innerHTML = "";
+      empty.hidden = false;
+      return;
+    }
+
+    empty.hidden = true;
+    list.innerHTML = found
+      .map(
+        (item, i) => `
+      <li>
+        <button type="button" class="search-drop__item" data-index="${i}">
+          <strong>${item.title}</strong>
+          <span>${item.type}${item.text ? " · " + item.text : ""}</span>
+        </button>
+      </li>`
+      )
+      .join("");
+
+    list.querySelectorAll(".search-drop__item").forEach((btn, i) => {
+      btn.addEventListener("click", () => go(found[i]));
+    });
+
+    drop._found = found;
+  };
+
+  input.addEventListener("input", () => render(input.value));
+  input.addEventListener("focus", () => {
+    if (input.value.trim().length >= 2) render(input.value);
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const found = drop._found;
+    if (found?.length) {
+      go(found[Math.max(active, 0)]);
+    } else {
+      render(input.value);
+    }
+  });
+
+  input.addEventListener("keydown", (e) => {
+    const found = drop._found || [];
+    if (drop.hidden || !found.length) return;
+    const items = list.querySelectorAll(".search-drop__item");
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      active = (active + 1) % found.length;
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      active = (active - 1 + found.length) % found.length;
+    } else if (e.key === "Escape") {
+      close();
+      return;
+    } else {
+      return;
+    }
+    items.forEach((el, i) => el.classList.toggle("is-active", i === active));
+    items[active]?.scrollIntoView({ block: "nearest" });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrap")) close();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -272,11 +462,14 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveal();
   initHero();
   renderProducts("new");
-  renderRecommendations();
-  initRecSwiper();
   initTabs();
+  renderSold();
+  initPartners();
+  initSoldSwiper();
+  renderWorks();
+  replaceServiceIcons();
+  initServicesMore();
   initModal();
   initCookie();
-  initCatalogBtn();
-  initNavScroll();
+  initSearch();
 });
