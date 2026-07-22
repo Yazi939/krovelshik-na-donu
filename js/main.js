@@ -809,8 +809,88 @@ function initFloatDock() {
 function initCatalogBtn() {
   const btn = document.getElementById("catalogBtn");
   btn?.addEventListener("click", () => {
+    if (window.matchMedia("(max-width: 1100px)").matches) {
+      openMobileNav();
+      return;
+    }
     btn.classList.toggle("is-open");
     document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function openMobileNav() {
+  const nav = document.getElementById("mobileNav");
+  const overlay = document.getElementById("mobileNavOverlay");
+  const burger = document.getElementById("navBurger");
+  if (!nav || !overlay) return;
+  nav.hidden = false;
+  overlay.hidden = false;
+  requestAnimationFrame(() => {
+    nav.classList.add("is-open");
+    overlay.classList.add("is-open");
+  });
+  burger?.classList.add("is-open");
+  burger?.setAttribute("aria-expanded", "true");
+  burger?.setAttribute("aria-label", "Закрыть меню");
+  document.body.classList.add("nav-open");
+}
+
+function closeMobileNav() {
+  const nav = document.getElementById("mobileNav");
+  const overlay = document.getElementById("mobileNavOverlay");
+  const burger = document.getElementById("navBurger");
+  if (!nav || !overlay) return;
+  nav.classList.remove("is-open");
+  overlay.classList.remove("is-open");
+  burger?.classList.remove("is-open");
+  burger?.setAttribute("aria-expanded", "false");
+  burger?.setAttribute("aria-label", "Открыть меню");
+  document.body.classList.remove("nav-open");
+  const hide = () => {
+    if (!nav.classList.contains("is-open")) {
+      nav.hidden = true;
+      overlay.hidden = true;
+    }
+  };
+  nav.addEventListener("transitionend", hide, { once: true });
+  setTimeout(hide, 350);
+}
+
+function initMobileNav() {
+  const burger = document.getElementById("navBurger");
+  const closeBtn = document.getElementById("mobileNavClose");
+  const overlay = document.getElementById("mobileNavOverlay");
+  const nav = document.getElementById("mobileNav");
+
+  burger?.addEventListener("click", () => {
+    if (nav?.classList.contains("is-open")) closeMobileNav();
+    else openMobileNav();
+  });
+  closeBtn?.addEventListener("click", closeMobileNav);
+  overlay?.addEventListener("click", closeMobileNav);
+
+  nav?.querySelectorAll("a[href]").forEach((link) => {
+    link.addEventListener("click", () => closeMobileNav());
+  });
+
+  nav?.querySelectorAll("[data-modal]").forEach((btn) => {
+    btn.addEventListener("click", () => closeMobileNav());
+  });
+
+  document.getElementById("mobileAuthBtn")?.addEventListener("click", (e) => {
+    if (e.target.closest("[data-logout]")) return;
+    e.preventDefault();
+    closeMobileNav();
+    if (typeof kdGetCurrentUser === "function" && kdGetCurrentUser()) return;
+    if (typeof kdOpenAuth === "function") kdOpenAuth("login");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (!window.matchMedia("(max-width: 1100px)").matches) closeMobileNav();
   });
 }
 
@@ -833,5 +913,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCookie();
   initSearch();
   initCatalogBtn();
+  initMobileNav();
   initFloatDock();
 });

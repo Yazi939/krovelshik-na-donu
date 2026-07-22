@@ -208,21 +208,36 @@ function kdToast(message) {
 
 function kdUpdateAuthUI() {
   const link = document.getElementById("authBtn");
+  const mobile = document.getElementById("mobileAuthBtn");
   const user = kdGetCurrentUser();
-  if (!link) return;
+  if (!link && !mobile) return;
+
+  const setLoggedIn = (el) => {
+    if (!el) return;
+    el.innerHTML = `<span>${user.name}</span><button type="button" class="topbar__logout" data-logout>Выйти</button>`;
+    el.classList.add("is-auth");
+  };
+  const setLoggedOut = (el) => {
+    if (!el) return;
+    el.classList.remove("is-auth");
+    el.innerHTML = "Вход / Регистрация";
+  };
+
   if (user) {
-    link.innerHTML = `<span>${user.name}</span><button type="button" class="topbar__logout" id="logoutBtn">Выйти</button>`;
-    link.classList.add("is-auth");
-    document.getElementById("logoutBtn")?.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      kdLogout();
-      kdUpdateAuthUI();
-      kdToast("Вы вышли из аккаунта");
+    setLoggedIn(link);
+    setLoggedIn(mobile);
+    document.querySelectorAll("[data-logout]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        kdLogout();
+        kdUpdateAuthUI();
+        kdToast("Вы вышли из аккаунта");
+      });
     });
   } else {
-    link.classList.remove("is-auth");
-    link.innerHTML = "Вход / Регистрация";
+    setLoggedOut(link);
+    setLoggedOut(mobile);
   }
 }
 

@@ -47,6 +47,9 @@
     <!-- Ряд 2: логотип, плюшки, корзина, CTA -->
     <header class="header">
       <div class="container header__inner">
+        <button type="button" class="nav-burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
         <a href="#hero" class="logo">
           <span class="logo__mark" aria-hidden="true">
             <svg viewBox="0 0 56 28" fill="none">
@@ -688,6 +691,41 @@
       </footer>
     </aside>
   </div>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" hidden></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильное меню" hidden>
+    <div class="mobile-nav__head">
+      <strong>Меню</strong>
+      <button type="button" class="mobile-nav__close" id="mobileNavClose" aria-label="Закрыть меню">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav__body">
+      <div class="mobile-nav__group">
+        <p class="mobile-nav__label">Навигация</p>
+        <a href="#hero">Главная</a>
+        <a href="#about">Отзывы</a>
+        <a href="#catalog">Магазин</a>
+        <a href="#contacts">Доставка</a>
+        <a href="#contacts">Услуги</a>
+        <a href="#catalog">Коллекции</a>
+        <a href="#about">О компании</a>
+        <a href="#vacancies">Вакансии</a>
+      </div>
+      <div class="mobile-nav__group">
+        <p class="mobile-nav__label">Каталог</p>
+        <a href="#catalog">Кровельные материалы</a>
+        <a href="#catalog">Водосточные системы</a>
+        <a href="#catalog">Теплоизоляция</a>
+        <a href="#promo">Инструменты</a>
+      </div>
+    </div>
+    <div class="mobile-nav__foot">
+      <a href="tel:+79614101452" class="mobile-nav__phone">+7 (961) 410-14-52</a>
+      <a href="#login" class="mobile-nav__auth" id="mobileAuthBtn">Вход / Регистрация</a>
+      <button type="button" class="btn btn--orange btn--block" data-modal="call">Заказать звонок</button>
+    </div>
+  </nav>
 
   <aside class="float-dock" aria-label="Быстрые действия">
     <button type="button" class="float-dock__btn" id="floatSearch" aria-label="Поиск">
