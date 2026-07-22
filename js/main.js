@@ -196,12 +196,13 @@ const SERVICE_ICON = `
 `;
 
 function productCardHTML(p) {
+  const id = kdProductId(p.title);
   const oldPrice = p.old ? `<div class="product-card__old">${p.old} ${p.unit}</div>` : "";
   return `
-    <article class="product-card">
+    <article class="product-card" data-product-id="${id}">
       <div class="product-card__top">
         <span class="product-card__badge">${p.badge || "Новинка"}</span>
-        <button type="button" class="product-card__fav" aria-label="В избранное">
+        <button type="button" class="product-card__fav${kdIsFav(id) ? " is-active" : ""}" aria-label="В избранное">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.6-7.1L2 9.3l7.2-.6L12 2l2.8 6.7 7.2.6-5.4 4.6 1.6 7.1z"/></svg>
         </button>
       </div>
@@ -211,7 +212,7 @@ function productCardHTML(p) {
       ${oldPrice}
       <div class="product-card__actions">
         <button type="button" class="product-card__buy">В корзину</button>
-        <button type="button" class="product-card__compare" aria-label="Сравнить">
+        <button type="button" class="product-card__compare${kdGetCompare().includes(id) ? " is-active" : ""}" aria-label="Сравнить">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
         </button>
       </div>
@@ -234,17 +235,19 @@ function soldCardHTML(p) {
 }
 
 function recsCardHTML(p) {
+  const id = kdProductId(p.title);
   const badge = p.badge ? `<span class="recs-card__badge">${p.badge}</span>` : "";
   const star = p.star ? `<span class="recs-card__star" aria-hidden="true">★</span>` : "";
   const unitShort = (p.unit || "₽ / шт.").replace(/^₽\s*/, "").trim();
   const old = p.old ? `<div class="recs-card__old">${p.old} ₽</div>` : "";
   return `
-    <article class="recs-card">
+    <article class="recs-card" data-product-id="${id}">
       <div class="recs-card__top">${badge}${star}</div>
       <a href="#promo" class="recs-card__img"><img src="${p.img}" alt="${p.title}" loading="lazy" /></a>
       <a href="#promo" class="recs-card__title">${p.title}</a>
       <div class="recs-card__price">${p.price} ₽ <span>${unitShort}</span></div>
       ${old}
+      <button type="button" class="btn btn--orange recs-card__buy" data-add-cart>В корзину</button>
     </article>
   `;
 }
@@ -260,6 +263,10 @@ function renderRecs(tab = "rec") {
     grid.style.transition = "opacity 0.35s ease, transform 0.35s ease";
     grid.style.opacity = "1";
     grid.style.transform = "none";
+    list.forEach((p, i) => {
+      const card = grid.querySelectorAll(".recs-card")[i];
+      if (card) kdBindProductCard(card, p);
+    });
   }, 140);
 }
 
@@ -312,8 +319,9 @@ function renderProducts(tab = "new", expanded = false) {
     grid.style.transition = "opacity 0.35s ease, transform 0.35s ease";
     grid.style.opacity = "1";
     grid.style.transform = "none";
-    grid.querySelectorAll(".product-card__fav").forEach((btn) => {
-      btn.addEventListener("click", () => btn.classList.toggle("is-active"));
+    list.forEach((p, i) => {
+      const card = grid.querySelectorAll(".product-card")[i];
+      if (card) kdBindProductCard(card, p);
     });
     document.getElementById("productsMore")?.addEventListener("click", () => {
       renderProducts(tab, true);
@@ -787,6 +795,18 @@ function initDesignBanner() {
   });
 }
 
+function initFloatDock() {
+  document.getElementById("floatSearch")?.addEventListener("click", () => {
+    const toggle = document.getElementById("searchToggle");
+    const panel = document.getElementById("searchPanel");
+    const input = document.getElementById("siteSearchInput");
+    if (!toggle) return;
+    if (panel?.hidden) toggle.click();
+    input?.focus();
+    document.getElementById("navbar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 function initCatalogBtn() {
   const btn = document.getElementById("catalogBtn");
   btn?.addEventListener("click", () => {
@@ -796,6 +816,7 @@ function initCatalogBtn() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initStoreUI();
   initSmoothScroll();
   initReveal();
   initHero();
@@ -813,4 +834,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCookie();
   initSearch();
   initCatalogBtn();
+  initFloatDock();
 });
