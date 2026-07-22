@@ -1633,8 +1633,8 @@ input {
   font-size: clamp(24px, 2.8vw, 34px);
   font-weight: 800;
   line-height: 1.2;
-  color: #5eb6ff;
-  text-shadow: 0 0 28px rgba(94, 182, 255, 0.35);
+  color: #e0a878;
+  text-shadow: 0 0 28px rgba(141, 84, 49, 0.35);
 }
 
 .design-slide__feats {
@@ -1664,7 +1664,7 @@ input {
   width: 40px;
   height: 40px;
   color: #fff;
-  filter: drop-shadow(0 0 8px rgba(120, 190, 255, 0.35));
+  filter: drop-shadow(0 0 8px rgba(141, 84, 49, 0.35));
 }
 
 .design-slide__icon svg {
@@ -2446,13 +2446,6 @@ input {
 .product-card__compare.is-active {
   color: var(--blue);
   border-color: var(--blue);
-}
-
-.recs-card__buy {
-  margin-top: 4px;
-  align-self: flex-start;
-  padding: 8px 14px;
-  font-size: 13px;
 }
 
 .cart-drawer[hidden] {

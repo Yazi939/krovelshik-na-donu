@@ -247,7 +247,6 @@ function recsCardHTML(p) {
       <a href="#promo" class="recs-card__title">${p.title}</a>
       <div class="recs-card__price">${p.price} ₽ <span>${unitShort}</span></div>
       ${old}
-      <button type="button" class="btn btn--orange recs-card__buy" data-add-cart>В корзину</button>
     </article>
   `;
 }
