@@ -278,264 +278,93 @@
       </div>
     </section>
 
-    <!-- Дизайнерские решения по кровле — промо-слайдер (фото объектов подставятся позже) -->
+    <!-- Дизайнерские решения по кровле -->
     <section class="section design-banner" id="design">
       <div class="container">
-        <div class="swiper design-swiper reveal">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="design-slide">
-                <div class="design-slide__bg" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="design-slide__content">
-                  <h2 class="design-slide__title">Дизайнерские решения</h2>
-                  <p class="design-slide__sub">по кровле</p>
-                  <ul class="design-slide__feats">
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18 L16 6 L28 18"/><path d="M8 18 V26 H24 V18"/></svg>
-                      </span>
-                      <span>Эскиз</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="10" width="20" height="14" rx="1"/><path d="M6 14 H26"/><path d="M12 10 V6 H20 V10"/></svg>
-                      </span>
-                      <span>3D-вид</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4" fill="currentColor" stroke="none"/></svg>
-                      </span>
-                      <span>Цвет</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 22 L16 8 L27 22 Z"/><path d="M11 22 V26 H21 V22"/></svg>
-                      </span>
-                      <span>Форма</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="design-slide__visual" aria-hidden="true">
-                  <div class="roof-3d roof-3d--a">
-                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="rWallA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5aad96"/><stop offset="55%" stop-color="#2d7a68"/><stop offset="100%" stop-color="#164a40"/></linearGradient>
-                        <linearGradient id="rWallSideA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2a6f5e"/><stop offset="100%" stop-color="#0f3a32"/></linearGradient>
-                        <linearGradient id="rRoofLeftA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c8efe4"/><stop offset="40%" stop-color="#6ec4a8"/><stop offset="100%" stop-color="#2f7a68"/></linearGradient>
-                        <linearGradient id="rRoofRightA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fd4bc"/><stop offset="100%" stop-color="#1f5c4a"/></linearGradient>
-                        <linearGradient id="rRidgeA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eaf8f2"/><stop offset="100%" stop-color="#7ec4a8"/></linearGradient>
-                        <linearGradient id="rGlassA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8e8d8" stop-opacity="0.55"/><stop offset="100%" stop-color="#1a4a40" stop-opacity="0.35"/></linearGradient>
-                        <linearGradient id="rGroundA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#041816" stop-opacity="0.45"/><stop offset="100%" stop-color="#041816" stop-opacity="0"/></linearGradient>
-                        <filter id="rSoftA" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#021410" flood-opacity="0.65"/></filter>
-                        <pattern id="rTilesA" width="18" height="10" patternUnits="userSpaceOnUse" patternTransform="skewX(-18)">
-                          <path d="M0 9 H18" stroke="#ffffff" stroke-opacity="0.14" stroke-width="0.8"/>
-                          <path d="M0 4 H18" stroke="#0a3a32" stroke-opacity="0.18" stroke-width="0.6"/>
-                        </pattern>
-                      </defs>
-                      <ellipse cx="240" cy="318" rx="170" ry="22" fill="url(#rGroundA)"/>
-                      <g filter="url(#rSoftA)">
-                        <polygon points="78,248 78,268 348,268 348,248 372,236 372,218 348,230" fill="#0d3a32" opacity="0.55"/>
-                        <polygon points="78,168 240,78 348,148 348,248 78,248" fill="url(#rWallA)"/>
-                        <polygon points="348,148 390,128 390,228 348,248" fill="url(#rWallSideA)"/>
-                        <polygon points="78,168 240,78 280,58 118,148" fill="url(#rRoofLeftA)"/>
-                        <polygon points="78,168 240,78 280,58 118,148" fill="url(#rTilesA)"/>
-                        <polygon points="240,78 280,58 390,128 348,148" fill="url(#rRoofRightA)"/>
-                        <polygon points="240,78 280,58 390,128 348,148" fill="url(#rTilesA)" opacity="0.7"/>
-                        <path d="M118 148 L280 58" stroke="url(#rRidgeA)" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M78 168 L240 78 L348 148" fill="none" stroke="#d7f0e6" stroke-width="2" opacity="0.45"/>
-                        <polygon points="300,95 318,86 318,118 300,128" fill="#3a7a68"/>
-                        <polygon points="318,86 332,94 332,126 318,118" fill="#1f5a48"/>
-                        <polygon points="296,90 318,78 336,88 314,100" fill="#9ed4c0"/>
-                        <rect x="130" y="188" width="52" height="68" rx="3" fill="#071f1a" opacity="0.65"/>
-                        <rect x="136" y="194" width="40" height="28" fill="url(#rGlassA)"/>
-                        <rect x="136" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
-                        <path d="M156 194 V248 M136 222 H176" stroke="#9fd8c4" stroke-opacity="0.35" stroke-width="1"/>
-                        <rect x="210" y="188" width="52" height="68" rx="3" fill="#071f1a" opacity="0.65"/>
-                        <rect x="216" y="194" width="40" height="28" fill="url(#rGlassA)"/>
-                        <rect x="216" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
-                        <path d="M236 194 V248 M216 222 H256" stroke="#9fd8c4" stroke-opacity="0.35" stroke-width="1"/>
-                        <rect x="290" y="198" width="38" height="50" rx="2" fill="#0a2a24" opacity="0.75"/>
-                        <rect x="296" y="204" width="26" height="18" fill="url(#rGlassA)" opacity="0.5"/>
-                        <circle cx="320" cy="230" r="2" fill="#c8efe4"/>
-                        <path d="M78 220 H348" stroke="#9fd8c4" stroke-opacity="0.12" stroke-width="1"/>
-                        <polygon points="120,150 210,95 230,105 140,162" fill="#ffffff" opacity="0.12"/>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+        <div class="design-banner__panel reveal">
+          <div class="design-slide">
+            <div class="design-slide__bg" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-
-            <div class="swiper-slide">
-              <div class="design-slide">
-                <div class="design-slide__bg" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="design-slide__content">
-                  <h2 class="design-slide__title">Эскиз под ваш дом</h2>
-                  <p class="design-slide__sub">от дизайнера кровли</p>
-                  <ul class="design-slide__feats">
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 24 L8 12 L16 6 L24 12 V24"/><path d="M12 24 V16 H20 V24"/></svg>
-                      </span>
-                      <span>Объект</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 22 L16 8 L26 22 Z"/><path d="M12 22 H20"/><circle cx="16" cy="16" r="2"/></svg>
-                      </span>
-                      <span>Крыша</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="18" height="18" rx="2"/><path d="M11 21 L15 13 L19 18 L21 15 L25 21"/></svg>
-                      </span>
-                      <span>Рендер</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 16 H26"/><path d="M16 6 V26"/><circle cx="16" cy="16" r="9"/></svg>
-                      </span>
-                      <span>Под ключ</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="design-slide__visual" aria-hidden="true">
-                  <div class="roof-3d roof-3d--b">
-                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="rWallB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6ab89a"/><stop offset="100%" stop-color="#1a5a48"/></linearGradient>
-                        <linearGradient id="rRoofB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c98a5a"/><stop offset="45%" stop-color="#8d5431"/><stop offset="100%" stop-color="#5c3018"/></linearGradient>
-                        <linearGradient id="rRoofSideB" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8d5431"/><stop offset="100%" stop-color="#5c3018"/></linearGradient>
-                        <linearGradient id="rGlassB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0e0d0" stop-opacity="0.45"/><stop offset="100%" stop-color="#1a3a32" stop-opacity="0.4"/></linearGradient>
-                        <filter id="rSoftB" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#021410" flood-opacity="0.6"/></filter>
-                        <pattern id="rTilesB" width="16" height="9" patternUnits="userSpaceOnUse">
-                          <path d="M0 8 Q8 2 16 8" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="0.9"/>
-                        </pattern>
-                      </defs>
-                      <ellipse cx="240" cy="320" rx="165" ry="20" fill="#041816" opacity="0.4"/>
-                      <g filter="url(#rSoftB)">
-                        <polygon points="95,200 95,268 355,268 355,200 240,105" fill="url(#rWallB)"/>
-                        <polygon points="95,200 240,105 355,200" fill="url(#rRoofB)"/>
-                        <polygon points="95,200 240,105 355,200" fill="url(#rTilesB)"/>
-                        <polygon points="240,105 285,88 400,182 355,200" fill="url(#rRoofSideB)"/>
-                        <polygon points="240,105 285,88 400,182 355,200" fill="url(#rTilesB)" opacity="0.55"/>
-                        <path d="M110 198 L240 112 L340 198" fill="none" stroke="#ffe0c2" stroke-width="2.2" opacity="0.4"/>
-                        <polygon points="195,155 240,125 285,155 285,185 195,185" fill="#2a6f5e"/>
-                        <polygon points="195,155 240,125 285,155" fill="#c98a5a"/>
-                        <rect x="218" y="158" width="34" height="27" rx="2" fill="url(#rGlassB)"/>
-                        <path d="M235 158 V185" stroke="#fff" stroke-opacity="0.25" stroke-width="1"/>
-                        <rect x="130" y="214" width="48" height="54" rx="3" fill="#071f1a" opacity="0.7"/>
-                        <rect x="136" y="220" width="36" height="42" fill="url(#rGlassB)"/>
-                        <path d="M154 220 V262 M136 241 H172" stroke="#fff" stroke-opacity="0.2" stroke-width="1"/>
-                        <rect x="270" y="214" width="48" height="54" rx="3" fill="#071f1a" opacity="0.7"/>
-                        <rect x="276" y="220" width="36" height="42" fill="url(#rGlassB)"/>
-                        <path d="M294 220 V262 M276 241 H312" stroke="#fff" stroke-opacity="0.2" stroke-width="1"/>
-                        <polygon points="200,268 200,248 280,248 280,268" fill="#0d3a32" opacity="0.5"/>
-                        <path d="M210 248 V230 M270 248 V230" stroke="#9ed4c0" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-                        <path d="M205 230 H275" stroke="#c8efe4" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-                        <polygon points="150,175 210,130 225,140 165,185" fill="#fff" opacity="0.1"/>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+            <div class="design-slide__content">
+              <h2 class="design-slide__title">Дизайнерские решения</h2>
+              <p class="design-slide__sub">по кровле</p>
+              <ul class="design-slide__feats">
+                <li>
+                  <span class="design-slide__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18 L16 6 L28 18"/><path d="M8 18 V26 H24 V18"/></svg>
+                  </span>
+                  <span>Эскиз</span>
+                </li>
+                <li>
+                  <span class="design-slide__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="10" width="20" height="14" rx="1"/><path d="M6 14 H26"/><path d="M12 10 V6 H20 V10"/></svg>
+                  </span>
+                  <span>3D-вид</span>
+                </li>
+                <li>
+                  <span class="design-slide__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4" fill="currentColor" stroke="none"/></svg>
+                  </span>
+                  <span>Цвет</span>
+                </li>
+                <li>
+                  <span class="design-slide__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 22 L16 8 L27 22 Z"/><path d="M11 22 V26 H21 V22"/></svg>
+                  </span>
+                  <span>Форма</span>
+                </li>
+              </ul>
             </div>
-
-            <div class="swiper-slide">
-              <div class="design-slide">
-                <div class="design-slide__bg" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="design-slide__content">
-                  <h2 class="design-slide__title">Дома под эти крыши</h2>
-                  <p class="design-slide__sub">уже построены</p>
-                  <ul class="design-slide__feats">
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="12" r="5"/><path d="M6 26 C6 20 11 18 16 18 C21 18 26 20 26 26"/></svg>
-                      </span>
-                      <span>Дизайн</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 20 L16 8 L27 20"/><path d="M9 20 V26 H23 V20"/></svg>
-                      </span>
-                      <span>Проект</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 24 V12 L16 7 L24 12 V24"/><path d="M14 24 V16 H18 V24"/></svg>
-                      </span>
-                      <span>Стройка</span>
-                    </li>
-                    <li>
-                      <span class="design-slide__icon" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 17 L14 23 L24 11"/><circle cx="16" cy="16" r="11"/></svg>
-                      </span>
-                      <span>Фото</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="design-slide__visual" aria-hidden="true">
-                  <div class="roof-3d roof-3d--c">
-                    <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="rWallC1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6eb8a0"/><stop offset="100%" stop-color="#235a48"/></linearGradient>
-                        <linearGradient id="rWallC2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3a7a68"/><stop offset="100%" stop-color="#123a32"/></linearGradient>
-                        <linearGradient id="rRoofC1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f4faf6"/><stop offset="100%" stop-color="#8aa098"/></linearGradient>
-                        <linearGradient id="rRoofC2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d5e8e0"/><stop offset="100%" stop-color="#5d7868"/></linearGradient>
-                        <linearGradient id="rGlassC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7f0e6" stop-opacity="0.5"/><stop offset="100%" stop-color="#163a32" stop-opacity="0.4"/></linearGradient>
-                        <filter id="rSoftC" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#021410" flood-opacity="0.6"/></filter>
-                        <pattern id="rTilesC" width="14" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
-                          <path d="M0 7 H14" stroke="#1a3a32" stroke-opacity="0.2" stroke-width="0.7"/>
-                          <path d="M0 3 H14" stroke="#fff" stroke-opacity="0.12" stroke-width="0.6"/>
-                        </pattern>
-                      </defs>
-                      <ellipse cx="240" cy="322" rx="175" ry="20" fill="#041816" opacity="0.4"/>
-                      <g filter="url(#rSoftC)">
-                        <polygon points="55,210 55,275 210,275 210,182" fill="url(#rWallC1)"/>
-                        <polygon points="55,210 132,118 210,182" fill="url(#rRoofC1)"/>
-                        <polygon points="55,210 132,118 210,182" fill="url(#rTilesC)"/>
-                        <polygon points="210,182 210,275 390,275 390,198" fill="url(#rWallC2)"/>
-                        <polygon points="210,182 295,108 390,198" fill="url(#rRoofC2)"/>
-                        <polygon points="210,182 295,108 390,198" fill="url(#rTilesC)" opacity="0.75"/>
-                        <polygon points="132,118 175,98 295,108 210,182" fill="#eef4fa" opacity="0.92"/>
-                        <polygon points="132,118 175,98 295,108 210,182" fill="url(#rTilesC)" opacity="0.45"/>
-                        <path d="M132 118 L175 98 L295 108" fill="none" stroke="#fff" stroke-width="2" opacity="0.45"/>
-                        <polygon points="330,230 330,275 420,275 420,242 390,228" fill="#1a4a40"/>
-                        <polygon points="330,230 360,205 450,218 420,242 390,228" fill="#b8c9da"/>
-                        <rect x="350" y="242" width="48" height="33" rx="2" fill="#071f1a" opacity="0.7"/>
-                        <path d="M374 242 V275" stroke="#9fd8c4" stroke-opacity="0.25" stroke-width="1.5"/>
-                        <rect x="85" y="220" width="42" height="50" rx="2" fill="#071f1a" opacity="0.65"/>
-                        <rect x="90" y="225" width="32" height="20" fill="url(#rGlassC)"/>
-                        <rect x="90" y="248" width="32" height="16" fill="url(#rGlassC)" opacity="0.75"/>
-                        <rect x="245" y="215" width="46" height="55" rx="2" fill="#071f1a" opacity="0.65"/>
-                        <rect x="251" y="221" width="34" height="43" fill="url(#rGlassC)"/>
-                        <path d="M268 221 V264 M251 242 H285" stroke="#fff" stroke-opacity="0.22" stroke-width="1"/>
-                        <rect x="310" y="215" width="46" height="55" rx="2" fill="#071f1a" opacity="0.65"/>
-                        <rect x="316" y="221" width="34" height="43" fill="url(#rGlassC)"/>
-                        <path d="M333 221 V264 M316 242 H350" stroke="#fff" stroke-opacity="0.22" stroke-width="1"/>
-                        <rect x="155" y="225" width="36" height="50" rx="2" fill="#0a2a24" opacity="0.8"/>
-                        <rect x="161" y="231" width="24" height="16" fill="url(#rGlassC)" opacity="0.45"/>
-                        <circle cx="183" cy="255" r="2" fill="#d7f0e6"/>
-                        <path d="M70 245 H200 M230 245 H380" stroke="#9fd8c4" stroke-opacity="0.1" stroke-width="1"/>
-                        <polygon points="90,175 145,130 160,140 105,185" fill="#fff" opacity="0.1"/>
-                        <polygon points="250,145 300,118 315,128 265,155" fill="#fff" opacity="0.08"/>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+            <div class="design-slide__visual" aria-hidden="true">
+              <div class="roof-3d roof-3d--a">
+                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="rWallA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5aad96"/><stop offset="55%" stop-color="#2d7a68"/><stop offset="100%" stop-color="#164a40"/></linearGradient>
+                    <linearGradient id="rWallSideA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2a6f5e"/><stop offset="100%" stop-color="#0f3a32"/></linearGradient>
+                    <linearGradient id="rRoofLeftA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c8efe4"/><stop offset="40%" stop-color="#6ec4a8"/><stop offset="100%" stop-color="#2f7a68"/></linearGradient>
+                    <linearGradient id="rRoofRightA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fd4bc"/><stop offset="100%" stop-color="#1f5c4a"/></linearGradient>
+                    <linearGradient id="rRidgeA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eaf8f2"/><stop offset="100%" stop-color="#7ec4a8"/></linearGradient>
+                    <linearGradient id="rGlassA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8e8d8" stop-opacity="0.55"/><stop offset="100%" stop-color="#1a4a40" stop-opacity="0.35"/></linearGradient>
+                    <linearGradient id="rGroundA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#041816" stop-opacity="0.45"/><stop offset="100%" stop-color="#041816" stop-opacity="0"/></linearGradient>
+                    <filter id="rSoftA" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#021410" flood-opacity="0.65"/></filter>
+                    <pattern id="rTilesA" width="18" height="10" patternUnits="userSpaceOnUse" patternTransform="skewX(-18)">
+                      <path d="M0 9 H18" stroke="#ffffff" stroke-opacity="0.14" stroke-width="0.8"/>
+                      <path d="M0 4 H18" stroke="#0a3a32" stroke-opacity="0.18" stroke-width="0.6"/>
+                    </pattern>
+                  </defs>
+                  <ellipse cx="240" cy="318" rx="170" ry="22" fill="url(#rGroundA)"/>
+                  <g filter="url(#rSoftA)">
+                    <polygon points="78,248 78,268 348,268 348,248 372,236 372,218 348,230" fill="#0d3a32" opacity="0.55"/>
+                    <polygon points="78,168 240,78 348,148 348,248 78,248" fill="url(#rWallA)"/>
+                    <polygon points="348,148 390,128 390,228 348,248" fill="url(#rWallSideA)"/>
+                    <polygon points="78,168 240,78 280,58 118,148" fill="url(#rRoofLeftA)"/>
+                    <polygon points="78,168 240,78 280,58 118,148" fill="url(#rTilesA)"/>
+                    <polygon points="240,78 280,58 390,128 348,148" fill="url(#rRoofRightA)"/>
+                    <polygon points="240,78 280,58 390,128 348,148" fill="url(#rTilesA)" opacity="0.7"/>
+                    <path d="M118 148 L280 58" stroke="url(#rRidgeA)" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M78 168 L240 78 L348 148" fill="none" stroke="#d7f0e6" stroke-width="2" opacity="0.45"/>
+                    <polygon points="300,95 318,86 318,118 300,128" fill="#3a7a68"/>
+                    <polygon points="318,86 332,94 332,126 318,118" fill="#1f5a48"/>
+                    <polygon points="296,90 318,78 336,88 314,100" fill="#9ed4c0"/>
+                    <rect x="130" y="188" width="52" height="68" rx="3" fill="#071f1a" opacity="0.65"/>
+                    <rect x="136" y="194" width="40" height="28" fill="url(#rGlassA)"/>
+                    <rect x="136" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
+                    <path d="M156 194 V248 M136 222 H176" stroke="#9fd8c4" stroke-opacity="0.35" stroke-width="1"/>
+                    <rect x="210" y="188" width="52" height="68" rx="3" fill="#071f1a" opacity="0.65"/>
+                    <rect x="216" y="194" width="40" height="28" fill="url(#rGlassA)"/>
+                    <rect x="216" y="226" width="40" height="22" fill="url(#rGlassA)" opacity="0.7"/>
+                    <path d="M236 194 V248 M216 222 H256" stroke="#9fd8c4" stroke-opacity="0.35" stroke-width="1"/>
+                    <rect x="290" y="198" width="38" height="50" rx="2" fill="#0a2a24" opacity="0.75"/>
+                    <rect x="296" y="204" width="26" height="18" fill="url(#rGlassA)" opacity="0.5"/>
+                    <circle cx="320" cy="230" r="2" fill="#c8efe4"/>
+                    <path d="M78 220 H348" stroke="#9fd8c4" stroke-opacity="0.12" stroke-width="1"/>
+                    <polygon points="120,150 210,95 230,105 140,162" fill="#ffffff" opacity="0.12"/>
+                  </g>
+                </svg>
               </div>
             </div>
           </div>
-          <button type="button" class="design-nav design-nav--prev" aria-label="Назад"></button>
-          <button type="button" class="design-nav design-nav--next" aria-label="Вперёд"></button>
-          <div class="design-pagination"></div>
         </div>
       </div>
     </section>

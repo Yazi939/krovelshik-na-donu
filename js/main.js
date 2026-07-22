@@ -776,24 +776,6 @@ function initSearch() {
   });
 }
 
-function initDesignBanner() {
-  if (typeof Swiper === "undefined") return;
-  if (!document.querySelector(".design-swiper")) return;
-  new Swiper(".design-swiper", {
-    loop: true,
-    speed: 650,
-    autoplay: { delay: 5500, disableOnInteraction: false },
-    navigation: {
-      nextEl: ".design-nav--next",
-      prevEl: ".design-nav--prev",
-    },
-    pagination: {
-      el: ".design-pagination",
-      clickable: true,
-    },
-  });
-}
-
 function initFloatDock() {
   document.getElementById("floatSearch")?.addEventListener("click", () => {
     const toggle = document.getElementById("searchToggle");
@@ -903,7 +885,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   renderNews("news");
   initNewsTabs();
-  initDesignBanner();
   renderRecs("rec");
   initRecsTabs();
   initPartners();
